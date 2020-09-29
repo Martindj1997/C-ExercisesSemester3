@@ -52,7 +52,7 @@ namespace Week4A
             yogaCB.Checked = false;
             karateCB.Checked = false;
             trainerCB.Checked = false;
-            monthsNUD.Value = monthsNUD.Minimum;  //1;
+            monthsNUD.Value = monthsNUD.Minimum;   //1;
 
             monthlyFeeTB.Clear(); // monthlyFeeTB.Text = string.Empty;
             totalTB.Clear();
