@@ -16,5 +16,10 @@ namespace Week4B_BankAccountMgr
         {
             InitializeComponent();
         }
+
+        private void createBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
