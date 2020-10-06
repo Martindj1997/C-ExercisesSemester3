@@ -10,7 +10,7 @@ namespace Week4B_BankAccountMgr
     {
         private static int number = 1000;
         public decimal Balance { get; private set; }
-        protected int Number { get; set; }
+        public int Number { get; set; }
         protected Person Owner { get; set; }
         public List<Transaction> Transactions { get; private set; }
 
@@ -55,7 +55,7 @@ namespace Week4B_BankAccountMgr
 
         public override string ToString()
         {
-            return $"{Number} {Owner} {Balance}";
+            return $"{Number} {Owner} {Balance:C}";
         }
     }
 }

@@ -168,7 +168,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(17, 235);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(657, 371);
+            this.groupBox2.Size = new System.Drawing.Size(822, 371);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Account Information";
@@ -190,7 +190,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.depositRB);
             this.groupBox3.Controls.Add(this.withdrawRB);
-            this.groupBox3.Location = new System.Drawing.Point(330, 201);
+            this.groupBox3.Location = new System.Drawing.Point(500, 201);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(316, 132);
             this.groupBox3.TabIndex = 8;
@@ -267,7 +267,7 @@
             this.transactionsLB.ItemHeight = 20;
             this.transactionsLB.Location = new System.Drawing.Point(17, 209);
             this.transactionsLB.Name = "transactionsLB";
-            this.transactionsLB.Size = new System.Drawing.Size(274, 124);
+            this.transactionsLB.Size = new System.Drawing.Size(477, 124);
             this.transactionsLB.TabIndex = 7;
             // 
             // accountsLB
@@ -276,8 +276,10 @@
             this.accountsLB.ItemHeight = 20;
             this.accountsLB.Location = new System.Drawing.Point(17, 79);
             this.accountsLB.Name = "accountsLB";
-            this.accountsLB.Size = new System.Drawing.Size(274, 124);
+            this.accountsLB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.accountsLB.Size = new System.Drawing.Size(477, 124);
             this.accountsLB.TabIndex = 6;
+            this.accountsLB.SelectedIndexChanged += new System.EventHandler(this.accountsLB_SelectedIndexChanged);
             // 
             // balanceTB
             // 
@@ -325,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 619);
+            this.ClientSize = new System.Drawing.Size(851, 619);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.createBtn);
