@@ -19,6 +19,15 @@ namespace Week4B_BankAccountMgr
         public decimal Amount { get; set; }
         public DateTime Timestamp { get; set; }
         public TransactionType Type { get; set; }
+
+        public TransactionType TransactionType
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public override string ToString()
         {
             return $"{Timestamp} {Type} {Amount}"; 

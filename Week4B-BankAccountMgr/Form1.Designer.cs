@@ -34,24 +34,24 @@
             this.lastTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chequingRB = new System.Windows.Forms.RadioButton();
             this.savingsRB = new System.Windows.Forms.RadioButton();
+            this.chequingRB = new System.Windows.Forms.RadioButton();
             this.createBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numberTB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.resultLbl = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.amountNUD = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.depositRB = new System.Windows.Forms.RadioButton();
+            this.withdrawRB = new System.Windows.Forms.RadioButton();
+            this.transactionsLB = new System.Windows.Forms.ListBox();
+            this.accountsLB = new System.Windows.Forms.ListBox();
             this.balanceTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.accountsLB = new System.Windows.Forms.ListBox();
-            this.transactionsLB = new System.Windows.Forms.ListBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.withdrawRB = new System.Windows.Forms.RadioButton();
-            this.depositRB = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.amountNUD = new System.Windows.Forms.NumericUpDown();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.resultLbl = new System.Windows.Forms.Label();
+            this.numberTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -112,18 +112,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Type";
             // 
-            // chequingRB
-            // 
-            this.chequingRB.AutoSize = true;
-            this.chequingRB.Location = new System.Drawing.Point(10, 31);
-            this.chequingRB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chequingRB.Name = "chequingRB";
-            this.chequingRB.Size = new System.Drawing.Size(158, 24);
-            this.chequingRB.TabIndex = 0;
-            this.chequingRB.TabStop = true;
-            this.chequingRB.Text = "Chequing Account";
-            this.chequingRB.UseVisualStyleBackColor = true;
-            // 
             // savingsRB
             // 
             this.savingsRB.AutoSize = true;
@@ -132,9 +120,21 @@
             this.savingsRB.Name = "savingsRB";
             this.savingsRB.Size = new System.Drawing.Size(146, 24);
             this.savingsRB.TabIndex = 1;
-            this.savingsRB.TabStop = true;
             this.savingsRB.Text = "Savings Account";
             this.savingsRB.UseVisualStyleBackColor = true;
+            // 
+            // chequingRB
+            // 
+            this.chequingRB.AutoSize = true;
+            this.chequingRB.Checked = true;
+            this.chequingRB.Location = new System.Drawing.Point(10, 31);
+            this.chequingRB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chequingRB.Name = "chequingRB";
+            this.chequingRB.Size = new System.Drawing.Size(158, 24);
+            this.chequingRB.TabIndex = 0;
+            this.chequingRB.TabStop = true;
+            this.chequingRB.Text = "Chequing Account";
+            this.chequingRB.UseVisualStyleBackColor = true;
             // 
             // createBtn
             // 
@@ -173,65 +173,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Account Information";
             // 
-            // numberTB
+            // resultLbl
             // 
-            this.numberTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberTB.Location = new System.Drawing.Point(143, 35);
-            this.numberTB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.numberTB.Name = "numberTB";
-            this.numberTB.ReadOnly = true;
-            this.numberTB.Size = new System.Drawing.Size(148, 26);
-            this.numberTB.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 38);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Account Number:";
-            // 
-            // balanceTB
-            // 
-            this.balanceTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.balanceTB.Location = new System.Drawing.Point(405, 35);
-            this.balanceTB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.balanceTB.Name = "balanceTB";
-            this.balanceTB.ReadOnly = true;
-            this.balanceTB.Size = new System.Drawing.Size(148, 26);
-            this.balanceTB.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(326, 38);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Balance:";
-            // 
-            // accountsLB
-            // 
-            this.accountsLB.FormattingEnabled = true;
-            this.accountsLB.ItemHeight = 20;
-            this.accountsLB.Location = new System.Drawing.Point(17, 79);
-            this.accountsLB.Name = "accountsLB";
-            this.accountsLB.Size = new System.Drawing.Size(274, 124);
-            this.accountsLB.TabIndex = 6;
-            // 
-            // transactionsLB
-            // 
-            this.transactionsLB.FormattingEnabled = true;
-            this.transactionsLB.ItemHeight = 20;
-            this.transactionsLB.Location = new System.Drawing.Point(17, 209);
-            this.transactionsLB.Name = "transactionsLB";
-            this.transactionsLB.Size = new System.Drawing.Size(274, 124);
-            this.transactionsLB.TabIndex = 7;
+            this.resultLbl.AutoSize = true;
+            this.resultLbl.ForeColor = System.Drawing.Color.Green;
+            this.resultLbl.Location = new System.Drawing.Point(17, 345);
+            this.resultLbl.Name = "resultLbl";
+            this.resultLbl.Size = new System.Drawing.Size(204, 20);
+            this.resultLbl.TabIndex = 9;
+            this.resultLbl.Text = "Last Transaction Status OK";
             // 
             // groupBox3
             // 
@@ -247,36 +197,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add Transaction";
             // 
-            // withdrawRB
+            // addBtn
             // 
-            this.withdrawRB.AutoSize = true;
-            this.withdrawRB.Location = new System.Drawing.Point(7, 26);
-            this.withdrawRB.Name = "withdrawRB";
-            this.withdrawRB.Size = new System.Drawing.Size(93, 24);
-            this.withdrawRB.TabIndex = 0;
-            this.withdrawRB.TabStop = true;
-            this.withdrawRB.Text = "Withdraw";
-            this.withdrawRB.UseVisualStyleBackColor = true;
-            // 
-            // depositRB
-            // 
-            this.depositRB.AutoSize = true;
-            this.depositRB.Location = new System.Drawing.Point(7, 57);
-            this.depositRB.Name = "depositRB";
-            this.depositRB.Size = new System.Drawing.Size(82, 24);
-            this.depositRB.TabIndex = 1;
-            this.depositRB.TabStop = true;
-            this.depositRB.Text = "Deposit";
-            this.depositRB.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(135, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Amount:";
+            this.addBtn.Location = new System.Drawing.Point(90, 92);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(133, 31);
+            this.addBtn.TabIndex = 8;
+            this.addBtn.Text = "Add Transaction";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // amountNUD
             // 
@@ -301,24 +230,96 @@
             0,
             131072});
             // 
-            // addBtn
+            // label5
             // 
-            this.addBtn.Location = new System.Drawing.Point(90, 92);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(133, 31);
-            this.addBtn.TabIndex = 8;
-            this.addBtn.Text = "Add Transaction";
-            this.addBtn.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(135, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Amount:";
             // 
-            // resultLbl
+            // depositRB
             // 
-            this.resultLbl.AutoSize = true;
-            this.resultLbl.ForeColor = System.Drawing.Color.Green;
-            this.resultLbl.Location = new System.Drawing.Point(17, 345);
-            this.resultLbl.Name = "resultLbl";
-            this.resultLbl.Size = new System.Drawing.Size(204, 20);
-            this.resultLbl.TabIndex = 9;
-            this.resultLbl.Text = "Last Transaction Status OK";
+            this.depositRB.AutoSize = true;
+            this.depositRB.Location = new System.Drawing.Point(7, 57);
+            this.depositRB.Name = "depositRB";
+            this.depositRB.Size = new System.Drawing.Size(82, 24);
+            this.depositRB.TabIndex = 1;
+            this.depositRB.Text = "Deposit";
+            this.depositRB.UseVisualStyleBackColor = true;
+            // 
+            // withdrawRB
+            // 
+            this.withdrawRB.AutoSize = true;
+            this.withdrawRB.Checked = true;
+            this.withdrawRB.Location = new System.Drawing.Point(7, 26);
+            this.withdrawRB.Name = "withdrawRB";
+            this.withdrawRB.Size = new System.Drawing.Size(93, 24);
+            this.withdrawRB.TabIndex = 0;
+            this.withdrawRB.TabStop = true;
+            this.withdrawRB.Text = "Withdraw";
+            this.withdrawRB.UseVisualStyleBackColor = true;
+            // 
+            // transactionsLB
+            // 
+            this.transactionsLB.FormattingEnabled = true;
+            this.transactionsLB.ItemHeight = 20;
+            this.transactionsLB.Location = new System.Drawing.Point(17, 209);
+            this.transactionsLB.Name = "transactionsLB";
+            this.transactionsLB.Size = new System.Drawing.Size(274, 124);
+            this.transactionsLB.TabIndex = 7;
+            // 
+            // accountsLB
+            // 
+            this.accountsLB.FormattingEnabled = true;
+            this.accountsLB.ItemHeight = 20;
+            this.accountsLB.Location = new System.Drawing.Point(17, 79);
+            this.accountsLB.Name = "accountsLB";
+            this.accountsLB.Size = new System.Drawing.Size(274, 124);
+            this.accountsLB.TabIndex = 6;
+            // 
+            // balanceTB
+            // 
+            this.balanceTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balanceTB.Location = new System.Drawing.Point(405, 35);
+            this.balanceTB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.balanceTB.Name = "balanceTB";
+            this.balanceTB.ReadOnly = true;
+            this.balanceTB.Size = new System.Drawing.Size(148, 26);
+            this.balanceTB.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(326, 38);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Balance:";
+            // 
+            // numberTB
+            // 
+            this.numberTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberTB.Location = new System.Drawing.Point(143, 35);
+            this.numberTB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numberTB.Name = "numberTB";
+            this.numberTB.ReadOnly = true;
+            this.numberTB.Size = new System.Drawing.Size(148, 26);
+            this.numberTB.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Account Number:";
             // 
             // Form1
             // 
@@ -338,6 +339,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Bank Account Manager";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

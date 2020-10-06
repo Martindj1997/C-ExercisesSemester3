@@ -14,6 +14,22 @@ namespace Week4B_BankAccountMgr
         protected Person Owner { get; set; }
         public List<Transaction> Transactions { get; private set; }
 
+        internal Person Person
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Transaction Transaction
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public BankAccount(Person owner)
         {
             Number = number++;
