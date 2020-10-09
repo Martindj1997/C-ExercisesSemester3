@@ -53,12 +53,46 @@ namespace Week5B
 
         private void moveUpBtn_Click(object sender, EventArgs e)
         {
+            int index = namesLB.SelectedIndex;
+            if (index == -1)
+            {
+                OutputResult(Color.Red, "Move Up failed!  No name is currently selected in the list.");
+                return;
+            }
+            else if (index == 0)
+            {
+                OutputResult(Color.Red, "Move Up failed!  The name is already at the top of the list.");
+                return;
+            }
 
+            string name = namesLB.SelectedItem.ToString();
+            namesLB.Items.RemoveAt(index--);
+            namesLB.Items.Insert(index, name);
+            namesLB.SelectedIndex = index;
+
+            OutputResult(Color.Green, "Name moved up.");
         }
 
         private void moveDownBtn_Click(object sender, EventArgs e)
         {
+            int index = namesLB.SelectedIndex;
+            if (index == -1)
+            {
+                OutputResult(Color.Red, "Move Down failed!  No name is currently selected in the list.");
+                return;
+            }
+            else if (index == namesLB.Items.Count - 1)
+            {
+                OutputResult(Color.Red, "Move Down failed!  The name is already at the bottom of the list.");
+                return;
+            }
 
+            string name = namesLB.SelectedItem.ToString();
+            namesLB.Items.RemoveAt(index++);
+            namesLB.Items.Insert(index, name);
+            namesLB.SelectedIndex = index;
+
+            OutputResult(Color.Green, "Name moved down.");
         }
 
         private void OutputResult(Color color, string message)
@@ -66,6 +100,5 @@ namespace Week5B
             resultLbl.Text = message;
             resultLbl.ForeColor = color;
         }
-
     }
 }

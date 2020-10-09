@@ -30,16 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nameTB = new System.Windows.Forms.TextBox();
-            this.namesLB = new System.Windows.Forms.ListBox();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.deleteBtn = new System.Windows.Forms.Button();
-            this.moveUpBtn = new System.Windows.Forms.Button();
-            this.moveDownBtn = new System.Windows.Forms.Button();
-            this.clearBtn = new System.Windows.Forms.Button();
             this.resultLbl = new System.Windows.Forms.Label();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.moveDownBtn = new System.Windows.Forms.Button();
+            this.moveUpBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.namesLB = new System.Windows.Forms.ListBox();
+            this.nameTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(379, 420);
+            this.tabControl1.Size = new System.Drawing.Size(484, 420);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -68,85 +68,18 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(371, 387);
+            this.tabPage1.Size = new System.Drawing.Size(476, 387);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Exercise 5";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // resultLbl
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(371, 387);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "ComboBoxes";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
-            // 
-            // nameTB
-            // 
-            this.nameTB.Location = new System.Drawing.Point(92, 46);
-            this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(125, 26);
-            this.nameTB.TabIndex = 1;
-            // 
-            // namesLB
-            // 
-            this.namesLB.FormattingEnabled = true;
-            this.namesLB.ItemHeight = 20;
-            this.namesLB.Location = new System.Drawing.Point(35, 107);
-            this.namesLB.Name = "namesLB";
-            this.namesLB.Size = new System.Drawing.Size(182, 224);
-            this.namesLB.TabIndex = 2;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(239, 47);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(102, 30);
-            this.addBtn.TabIndex = 3;
-            this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Location = new System.Drawing.Point(239, 102);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(102, 30);
-            this.deleteBtn.TabIndex = 4;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.UseVisualStyleBackColor = true;
-            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
-            // 
-            // moveUpBtn
-            // 
-            this.moveUpBtn.Location = new System.Drawing.Point(239, 159);
-            this.moveUpBtn.Name = "moveUpBtn";
-            this.moveUpBtn.Size = new System.Drawing.Size(102, 30);
-            this.moveUpBtn.TabIndex = 5;
-            this.moveUpBtn.Text = "Move Up";
-            this.moveUpBtn.UseVisualStyleBackColor = true;
-            this.moveUpBtn.Click += new System.EventHandler(this.moveUpBtn_Click);
-            // 
-            // moveDownBtn
-            // 
-            this.moveDownBtn.Location = new System.Drawing.Point(239, 212);
-            this.moveDownBtn.Name = "moveDownBtn";
-            this.moveDownBtn.Size = new System.Drawing.Size(102, 30);
-            this.moveDownBtn.TabIndex = 6;
-            this.moveDownBtn.Text = "Move Down";
-            this.moveDownBtn.UseVisualStyleBackColor = true;
-            this.moveDownBtn.Click += new System.EventHandler(this.moveDownBtn_Click);
+            this.resultLbl.AutoSize = true;
+            this.resultLbl.Location = new System.Drawing.Point(35, 359);
+            this.resultLbl.Name = "resultLbl";
+            this.resultLbl.Size = new System.Drawing.Size(0, 20);
+            this.resultLbl.TabIndex = 8;
             // 
             // clearBtn
             // 
@@ -158,19 +91,86 @@
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // resultLbl
+            // moveDownBtn
             // 
-            this.resultLbl.AutoSize = true;
-            this.resultLbl.Location = new System.Drawing.Point(35, 359);
-            this.resultLbl.Name = "resultLbl";
-            this.resultLbl.Size = new System.Drawing.Size(0, 20);
-            this.resultLbl.TabIndex = 8;
+            this.moveDownBtn.Location = new System.Drawing.Point(239, 212);
+            this.moveDownBtn.Name = "moveDownBtn";
+            this.moveDownBtn.Size = new System.Drawing.Size(102, 30);
+            this.moveDownBtn.TabIndex = 6;
+            this.moveDownBtn.Text = "Move Down";
+            this.moveDownBtn.UseVisualStyleBackColor = true;
+            this.moveDownBtn.Click += new System.EventHandler(this.moveDownBtn_Click);
+            // 
+            // moveUpBtn
+            // 
+            this.moveUpBtn.Location = new System.Drawing.Point(239, 159);
+            this.moveUpBtn.Name = "moveUpBtn";
+            this.moveUpBtn.Size = new System.Drawing.Size(102, 30);
+            this.moveUpBtn.TabIndex = 5;
+            this.moveUpBtn.Text = "Move Up";
+            this.moveUpBtn.UseVisualStyleBackColor = true;
+            this.moveUpBtn.Click += new System.EventHandler(this.moveUpBtn_Click);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Location = new System.Drawing.Point(239, 102);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(102, 30);
+            this.deleteBtn.TabIndex = 4;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(239, 47);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(102, 30);
+            this.addBtn.TabIndex = 3;
+            this.addBtn.Text = "Add";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // namesLB
+            // 
+            this.namesLB.FormattingEnabled = true;
+            this.namesLB.ItemHeight = 20;
+            this.namesLB.Location = new System.Drawing.Point(35, 107);
+            this.namesLB.Name = "namesLB";
+            this.namesLB.Size = new System.Drawing.Size(182, 224);
+            this.namesLB.TabIndex = 2;
+            // 
+            // nameTB
+            // 
+            this.nameTB.Location = new System.Drawing.Point(92, 46);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(125, 26);
+            this.nameTB.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(371, 387);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "ComboBoxes";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 444);
+            this.ClientSize = new System.Drawing.Size(502, 444);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

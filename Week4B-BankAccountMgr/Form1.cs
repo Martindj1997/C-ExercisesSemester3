@@ -18,7 +18,15 @@ namespace Week4B_BankAccountMgr
             InitializeComponent();
         }
 
-    
+        internal Branch Branch
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+
         //internal Branch Branch
         //{
         //    get => default;
