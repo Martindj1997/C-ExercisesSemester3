@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4A", "Week4A\Week4A.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4B-BankAccountMgr", "Week4B-BankAccountMgr\Week4B-BankAccountMgr.csproj", "{130E4A7C-FE8D-4105-BB7F-22D0666BC7FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week5B", "Week5B\Week5B.csproj", "{19938C74-1B39-432E-94D1-526C3B490A64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{130E4A7C-FE8D-4105-BB7F-22D0666BC7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130E4A7C-FE8D-4105-BB7F-22D0666BC7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{130E4A7C-FE8D-4105-BB7F-22D0666BC7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19938C74-1B39-432E-94D1-526C3B490A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19938C74-1B39-432E-94D1-526C3B490A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19938C74-1B39-432E-94D1-526C3B490A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19938C74-1B39-432E-94D1-526C3B490A64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
