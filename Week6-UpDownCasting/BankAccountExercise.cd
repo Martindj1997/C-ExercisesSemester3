@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Week4B_BankAccountMgr.BankAccount">
+    <Position X="4" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAACAAAAAQAAEAEgAAAAEAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BankAccount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+      <Property Name="Transaction" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Week4B_BankAccountMgr.Branch">
+    <Position X="0.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAQAAAAAAACAgAAAAAAAgAA=</HashCode>
+      <FileName>Branch.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BankAccount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Week4B_BankAccountMgr.Person">
+    <Position X="7.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Week4B_BankAccountMgr.SavingsAccount">
+    <Position X="3" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SavingsAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Week4B_BankAccountMgr.Transaction">
+    <Position X="7.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAACAACAAAAAAAEAAQAAAAAAAAA=</HashCode>
+      <FileName>Transaction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TransactionType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Week4B_BankAccountMgr.Form1">
+    <Position X="0.5" Y="4" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEADAAABACQACAABACOACAAEkATKQAgQAgEAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Branch" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Week4B_BankAccountMgr.ChequingAccount">
+    <Position X="5.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChequingAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Week4B_BankAccountMgr.TransactionType">
+    <Position X="8" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transaction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
