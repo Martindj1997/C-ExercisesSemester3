@@ -113,7 +113,7 @@ namespace Week4B_BankAccountMgr
 
                 if (b is SavingsAccount sa)  // new way in C# of doing a safe downcast
                 {
-                    // this was the old way of doing a safe downcast in C#
+                    // this was the old way of doing a safe downcast in C# after verifying the type using "is"
                     // SavingsAccount sa = (SavingsAccount)b;
                     //interest += safeSA.Balance * safeSA.InterestRate;
 
