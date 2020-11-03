@@ -5,23 +5,23 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week1-Forms Intro", "Week1\Week1-Forms Intro.csproj", "{CB5A86D5-1720-46E6-8633-0EA9BFD076F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2 - ModelView", "Week2 - ModelView\Week2 - ModelView.csproj", "{FA416AE4-C8E4-427B-9334-9F5C9E9D597F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2 -ConsoleCarsModelView", "Week2 - ModelView\Week2 -ConsoleCarsModelView.csproj", "{FA416AE4-C8E4-427B-9334-9F5C9E9D597F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2-Forms", "Week2-Forms\Week2-Forms.csproj", "{BBDC0F9C-F156-410D-91EE-FF0DBD12AA0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2-CarsForms", "Week2-Forms\Week2-CarsForms.csproj", "{BBDC0F9C-F156-410D-91EE-FF0DBD12AA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3A", "Week3A\Week3A.csproj", "{115D92B1-B2C0-41C8-B9AB-3B89C3CE2014}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3A-ConsoleCarsFiles", "Week3A\Week3A-ConsoleCarsFiles.csproj", "{115D92B1-B2C0-41C8-B9AB-3B89C3CE2014}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3-Highlander", "Week3-Highlander\Week3-Highlander.csproj", "{4B108415-D5D6-4A41-B6BD-8B4C90F291D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4A", "Week4A\Week4A.csproj", "{B0115EE8-667F-4FCF-9B56-EFA9668C2928}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4A-MembershipWF", "Week4A\Week4A-MembershipWF.csproj", "{B0115EE8-667F-4FCF-9B56-EFA9668C2928}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4B-BankAccountMgr", "Week4B-BankAccountMgr\Week4B-BankAccountMgr.csproj", "{130E4A7C-FE8D-4105-BB7F-22D0666BC7FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week5B", "Week5B\Week5B.csproj", "{19938C74-1B39-432E-94D1-526C3B490A64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week5B-ListBoxes", "Week5B\Week5B-ListBoxes.csproj", "{19938C74-1B39-432E-94D1-526C3B490A64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6-UpDownCasting", "Week6-UpDownCasting\Week6-UpDownCasting.csproj", "{CC227E4E-E04B-4412-9672-A602FF379E19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6B-Moon", "Week6B-Moon\Week6B-Moon.csproj", "{0B8E52E8-7B01-45E5-8A9F-6AAEB3162240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6B-MoonEx", "Week6B-Moon\Week6B-MoonEx.csproj", "{0B8E52E8-7B01-45E5-8A9F-6AAEB3162240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7-Crypto", "Week7-Crypto\Week7-Crypto.csproj", "{07D5AB44-31C3-4AA3-98AB-FB774573B3D8}"
 EndProject
