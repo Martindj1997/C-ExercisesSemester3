@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7-Crypto", "Week7-Crypt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7-Interfaces", "Week7-Interfaces\Week7-Interfaces.csproj", "{A5B8C11F-27EA-4124-A84E-6DCC9B35B5F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week9-Events", "Week9-Events\Week9-Events.csproj", "{553B167B-9A3E-412D-A863-33C4B64F850F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{A5B8C11F-27EA-4124-A84E-6DCC9B35B5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5B8C11F-27EA-4124-A84E-6DCC9B35B5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5B8C11F-27EA-4124-A84E-6DCC9B35B5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553B167B-9A3E-412D-A863-33C4B64F850F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553B167B-9A3E-412D-A863-33C4B64F850F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553B167B-9A3E-412D-A863-33C4B64F850F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553B167B-9A3E-412D-A863-33C4B64F850F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
