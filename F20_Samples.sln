@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7-Interfaces", "Week7-I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week9-Events", "Week9-Events\Week9-Events.csproj", "{553B167B-9A3E-412D-A863-33C4B64F850F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week9-FindAndReplaceEx", "Week9-FindAndReplaceEx\Week9-FindAndReplaceEx.csproj", "{961F2D05-124F-4379-9639-CF7C1900CE71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{553B167B-9A3E-412D-A863-33C4B64F850F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{553B167B-9A3E-412D-A863-33C4B64F850F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{553B167B-9A3E-412D-A863-33C4B64F850F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961F2D05-124F-4379-9639-CF7C1900CE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961F2D05-124F-4379-9639-CF7C1900CE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961F2D05-124F-4379-9639-CF7C1900CE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961F2D05-124F-4379-9639-CF7C1900CE71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
