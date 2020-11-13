@@ -38,6 +38,8 @@
             this.subLB = new System.Windows.Forms.ListBox();
             this.newBtn = new System.Windows.Forms.Button();
             this.subBtn = new System.Windows.Forms.Button();
+            this.sortCB = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +133,36 @@
             this.subBtn.UseVisualStyleBackColor = true;
             this.subBtn.Click += new System.EventHandler(this.subBtn_Click);
             // 
+            // sortCB
+            // 
+            this.sortCB.FormattingEnabled = true;
+            this.sortCB.Items.AddRange(new object[] {
+            "IComparable",
+            "LINQ",
+            "Lambda"});
+            this.sortCB.Location = new System.Drawing.Point(943, 86);
+            this.sortCB.Name = "sortCB";
+            this.sortCB.Size = new System.Drawing.Size(149, 32);
+            this.sortCB.TabIndex = 10;
+            this.sortCB.SelectedIndexChanged += new System.EventHandler(this.sortCB_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(839, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Sort Type:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 516);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.sortCB);
             this.Controls.Add(this.subBtn);
             this.Controls.Add(this.newBtn);
             this.Controls.Add(this.subLB);
@@ -150,6 +177,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Form1";
             this.Text = "Events";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +195,8 @@
         private System.Windows.Forms.ListBox subLB;
         private System.Windows.Forms.Button newBtn;
         private System.Windows.Forms.Button subBtn;
+        private System.Windows.Forms.ComboBox sortCB;
+        private System.Windows.Forms.Label label3;
     }
 }
 

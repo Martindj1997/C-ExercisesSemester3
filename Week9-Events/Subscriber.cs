@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Week9_Events
 {
-    class Subscriber
+    class Subscriber : IComparable<Subscriber>
     {
         public string Name { get; set; }
         public NewIssueEventArgs LastIssue { get; set; }
@@ -33,5 +33,14 @@ namespace Week9_Events
             return $"{Name}, {LastIssue.Name}, {LastIssue.Time}";
         }
 
+        public int CompareTo(Subscriber other)
+        {
+            // Check whether other null, return 1 (greater if so)
+            if (other == null)
+                return 1;
+
+            // Compare the objects using the Name field
+            return Name.CompareTo(other.Name);
+        }
     }
 }

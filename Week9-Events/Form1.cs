@@ -15,6 +15,8 @@ namespace Week9_Events
     {
         private List<Subscriber> Subscribers { get; set; } = new List<Subscriber>();
         private List<Publisher> Publishers { get; set; } = new List<Publisher>();
+        private enum SortAlgorithms { SORT_ICOMPARABLE, SORT_LINQ, SORT_LAMBDA };
+        private SortAlgorithms sortAlgorithm = SortAlgorithms.SORT_ICOMPARABLE;
 
         public Form1()
         {
@@ -33,7 +35,22 @@ namespace Week9_Events
         {
             Subscriber sub = new Subscriber(subTB.Text);
             Subscribers.Add(sub);
-            subLB.Items.Add(sub);
+            RefreshSubscribers();
+        }
+
+        private void SortSubscribers()
+        {
+            if (sortAlgorithm == SortAlgorithms.SORT_ICOMPARABLE)
+                Subscribers.Sort();
+            else if (sortAlgorithm == SortAlgorithms.SORT_LINQ)
+            {
+                var result = from sub in Subscribers
+                             orderby sub.Name
+                             select sub;
+                Subscribers = result.ToList();
+            }
+            else if (sortAlgorithm == SortAlgorithms.SORT_LAMBDA)
+                Subscribers.Sort((s1, s2) => s1.Name.CompareTo(s2.Name));
         }
 
         private void newBtn_Click(object sender, EventArgs e)
@@ -49,6 +66,7 @@ namespace Week9_Events
         private void RefreshSubscribers()
         {
             subLB.Items.Clear();
+            SortSubscribers();
             foreach (Subscriber sub in Subscribers)
                 subLB.Items.Add(sub);
         }
@@ -71,6 +89,21 @@ namespace Week9_Events
                 pub.NewIssue += sub.NewIssueCallBack;
                 pub.NewIssueCustomArgs += sub.NewIssueCustomCallBack;
             }
+        }
+
+        private void sortCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sortCB.SelectedIndex == 0)
+                sortAlgorithm = SortAlgorithms.SORT_ICOMPARABLE;
+            else if (sortCB.SelectedIndex == 1)
+                sortAlgorithm = SortAlgorithms.SORT_LINQ;
+            else if (sortCB.SelectedIndex == 2)
+                sortAlgorithm = SortAlgorithms.SORT_LAMBDA;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            sortCB.SelectedIndex = 0;
         }
     }
 }
