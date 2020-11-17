@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week9-Events", "Week9-Event
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week9-FindAndReplaceEx", "Week9-FindAndReplaceEx\Week9-FindAndReplaceEx.csproj", "{961F2D05-124F-4379-9639-CF7C1900CE71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10-Collections", "Week10-Collections\Week10-Collections.csproj", "{E6044754-2A5D-4D2E-AF23-ED3C525FF9E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{961F2D05-124F-4379-9639-CF7C1900CE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{961F2D05-124F-4379-9639-CF7C1900CE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{961F2D05-124F-4379-9639-CF7C1900CE71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6044754-2A5D-4D2E-AF23-ED3C525FF9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6044754-2A5D-4D2E-AF23-ED3C525FF9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6044754-2A5D-4D2E-AF23-ED3C525FF9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6044754-2A5D-4D2E-AF23-ED3C525FF9E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
