@@ -69,6 +69,9 @@ namespace Week10_Collections
             carsLB.Items.Clear();
             foreach (Car c in carDictionary.Values)
                 carsLB.Items.Add(c);
+
+            // limit range of NUD to prevent going beyond the end
+            indexNUD.Maximum = carsLB.Items.Count;
         }
 
         private bool ParseCar(string carInfo, out Car car)
@@ -96,6 +99,37 @@ namespace Week10_Collections
             car = new Car(make, model, fuelAmount, mileage);
             return true;
             //myCarList.Add(new Car(make, model, fuelAmount, mileage));
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            if (carStack.Count > 0)
+                stackTB.Text = carStack.Pop().ToString();
+            if (carQueue.Count > 0)
+                queueTB.Text = carQueue.Dequeue().ToString();
+        }
+
+        private void findBtn_Click(object sender, EventArgs e)
+        {
+            int index = (int)indexNUD.Value;
+
+            // Dictionary are fast for searching O(1)
+            if (carDictionary.ContainsKey(index))
+                dictionaryTB.Text = carDictionary[index].ToString();
+
+            if (index >= carList.Count)
+            {
+                MessageBox.Show("Index is out of range");
+                return;
+            }
+            // Lists are slow for searching O(n)
+            // Car car = carList[index - 1];
+            Car car = carList.Find(c => c.Id == index);
+            listTB.Text = car.ToString();
+
+            // stacks and queues are not meant for searching but you can find out if an element is present.  Slow O(n)
+            bool result = carQueue.Contains(car);
+            result = carStack.Contains(car);
         }
     }
 }

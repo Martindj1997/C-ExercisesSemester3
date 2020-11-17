@@ -37,7 +37,7 @@ namespace Week10_Collections
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.stackTB = new System.Windows.Forms.TextBox();
-            this.QueueTB = new System.Windows.Forms.TextBox();
+            this.queueTB = new System.Windows.Forms.TextBox();
             this.indexNUD = new System.Windows.Forms.NumericUpDown();
             this.dictionaryTB = new System.Windows.Forms.TextBox();
             this.listTB = new System.Windows.Forms.TextBox();
@@ -119,20 +119,30 @@ namespace Week10_Collections
             this.stackTB.Size = new System.Drawing.Size(280, 29);
             this.stackTB.TabIndex = 7;
             // 
-            // QueueTB
+            // queueTB
             // 
-            this.QueueTB.Location = new System.Drawing.Point(653, 121);
-            this.QueueTB.Name = "QueueTB";
-            this.QueueTB.ReadOnly = true;
-            this.QueueTB.Size = new System.Drawing.Size(280, 29);
-            this.QueueTB.TabIndex = 8;
+            this.queueTB.Location = new System.Drawing.Point(653, 121);
+            this.queueTB.Name = "queueTB";
+            this.queueTB.ReadOnly = true;
+            this.queueTB.Size = new System.Drawing.Size(280, 29);
+            this.queueTB.TabIndex = 8;
             // 
             // indexNUD
             // 
             this.indexNUD.Location = new System.Drawing.Point(653, 182);
+            this.indexNUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.indexNUD.Name = "indexNUD";
             this.indexNUD.Size = new System.Drawing.Size(100, 29);
             this.indexNUD.TabIndex = 9;
+            this.indexNUD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // dictionaryTB
             // 
@@ -158,6 +168,7 @@ namespace Week10_Collections
             this.nextBtn.TabIndex = 12;
             this.nextBtn.Text = "Next";
             this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // findBtn
             // 
@@ -167,6 +178,7 @@ namespace Week10_Collections
             this.findBtn.TabIndex = 13;
             this.findBtn.Text = "Find";
             this.findBtn.UseVisualStyleBackColor = true;
+            this.findBtn.Click += new System.EventHandler(this.findBtn_Click);
             // 
             // openFileDialog1
             // 
@@ -182,7 +194,7 @@ namespace Week10_Collections
             this.Controls.Add(this.listTB);
             this.Controls.Add(this.dictionaryTB);
             this.Controls.Add(this.indexNUD);
-            this.Controls.Add(this.QueueTB);
+            this.Controls.Add(this.queueTB);
             this.Controls.Add(this.stackTB);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -212,7 +224,7 @@ namespace Week10_Collections
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox stackTB;
-        private System.Windows.Forms.TextBox QueueTB;
+        private System.Windows.Forms.TextBox queueTB;
         private System.Windows.Forms.NumericUpDown indexNUD;
         private System.Windows.Forms.TextBox dictionaryTB;
         private System.Windows.Forms.TextBox listTB;
