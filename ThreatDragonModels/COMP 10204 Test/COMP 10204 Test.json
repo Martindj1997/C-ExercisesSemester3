@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "title": "COMP 10204 Test",
+    "owner": "Joe"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Main",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
