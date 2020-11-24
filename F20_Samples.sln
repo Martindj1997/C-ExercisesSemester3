@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10-Collections", "Week1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10-LambdaSorting", "Week10-LambdaSorting\Week10-LambdaSorting.csproj", "{B93E458C-257F-47FE-BF21-6A6CBD8093A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week11-GenericCRUD", "Week11-GenericCRUD\Week11-GenericCRUD.csproj", "{B6EDF8DC-09AB-4462-A26E-CE3D1EB378CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week11DB", "Week11DB\Week11DB.csproj", "{2782C7C1-E345-4277-BC53-A661D387A855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{B93E458C-257F-47FE-BF21-6A6CBD8093A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93E458C-257F-47FE-BF21-6A6CBD8093A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B93E458C-257F-47FE-BF21-6A6CBD8093A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6EDF8DC-09AB-4462-A26E-CE3D1EB378CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6EDF8DC-09AB-4462-A26E-CE3D1EB378CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6EDF8DC-09AB-4462-A26E-CE3D1EB378CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6EDF8DC-09AB-4462-A26E-CE3D1EB378CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2782C7C1-E345-4277-BC53-A661D387A855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2782C7C1-E345-4277-BC53-A661D387A855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2782C7C1-E345-4277-BC53-A661D387A855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2782C7C1-E345-4277-BC53-A661D387A855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
