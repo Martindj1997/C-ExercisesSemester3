@@ -28,7 +28,7 @@ namespace Week11B_DB2
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dN20_Cars5DataSet.MILEAGE' table. You can move, or remove it, as needed.
-            this.mILEAGETableAdapter.Fill(this.dN20_Cars5DataSet.MILEAGE);
+            //this.mILEAGETableAdapter.Fill(this.dN20_Cars5DataSet.MILEAGE);
             // TODO: This line of code loads data into the 'dN20_Cars5DataSet.CARS' table. You can move, or remove it, as needed.
             this.cARSTableAdapter.Fill(this.dN20_Cars5DataSet.CARS);
 
