@@ -22,6 +22,9 @@ namespace Week12DBExercise
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            if ((makeTB.Text.Trim() == "") || modelTB.Text.Trim() == "")
+                return;  //log an error or popup a message
+
             try
             {
                 // Build the SQL string to calculate the average Milege

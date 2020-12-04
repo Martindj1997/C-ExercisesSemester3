@@ -14,8 +14,7 @@ namespace Week12DBExercise
     public partial class MainForm : Form
     {
         public SqlConnection Connection { get; }
-        String connectionString = @"Data Source=.;Initial " +
-        "Catalog=COMP10204ExerciseWeek12;Integrated Security=True";
+        String connectionString = @"Data Source=.;Initial Catalog=COMP10204ExerciseWeek12;Integrated Security=True";
         public MainForm()
         {
             InitializeComponent();
@@ -71,20 +70,39 @@ namespace Week12DBExercise
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Mileage WHERE car_id = @carId", Connection);
-                SqlParameter param = new SqlParameter("@carId", SqlDbType.Int);
-                cmd.Parameters.Add(param);
-
                 string[] carFields = resultsListBox.SelectedItem.ToString().Split('|');
                 bool result = int.TryParse(carFields[0].Trim(), out int carId);
                 if (result)
                 {
-                    // update the parameter value
+                    // build query with parameter for car id and update the parameter value
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Mileage WHERE car_id = @carId", Connection);
+                    SqlParameter param = new SqlParameter("@carId", SqlDbType.Int);
                     param.Value = carId;
+                    cmd.Parameters.Add(param);
+
+                    int totalDistance = 0;
+                    float gasUsed = 0;
 
                     // run select query to get all mileage entries for the car in question
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        totalDistance += (int)reader["endkm"] - (int)reader["startkm"];
+                        gasUsed += (float)reader["gasused"];
+                    }
+                    reader.Close();
 
-                    // calculate the mileage
+                    // calculate the mileage (L/100km)
+                    double avgMileage = 0;
+                    if (totalDistance != 0)
+                    {
+                        avgMileage = gasUsed / (totalDistance / 100);
+                        mileageTB.Text = avgMileage.ToString("f2");
+                    }
+                    else
+                        mileageTB.Text = "No trips found for this vehicle in the database";
+
+                    vehicleTB.Text = $"{carFields[1].Trim()} {carFields[2].Trim()} {carFields[3].Trim()}";
                 }
 
             }
