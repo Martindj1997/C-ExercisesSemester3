@@ -217,6 +217,7 @@ namespace Week12B_CHDB
             this.lastBtn.TabIndex = 5;
             this.lastBtn.Text = "Last 10";
             this.lastBtn.UseVisualStyleBackColor = true;
+            this.lastBtn.Click += new System.EventHandler(this.lastBtn_Click);
             // 
             // applyBtn
             // 
@@ -236,6 +237,7 @@ namespace Week12B_CHDB
             this.resetBtn.TabIndex = 6;
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // Form1
             // 

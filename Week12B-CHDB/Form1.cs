@@ -139,5 +139,35 @@ namespace Week12B_CHDB
             // update listbox
             UpdateLB(requestedMeds);
         }
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            descTB.ResetText();
+            costNUD.Value = 0;
+            lastDTP.Value = DateTime.Now.AddYears(-50);
+            defaultRB.Checked = true;
+            UpdateLB(meds);
+        }
+
+        private void lastBtn_Click(object sender, EventArgs e)
+        {
+            // LINQ method syntax with chaining
+            var methodMeds = meds
+                             .Where(med => med.Last > DateTime.Now.AddYears(-10))
+                             .OrderByDescending(med => med.Last)
+                             .Take(10)
+                             .Select(med => new { med.Description, med.Cost, med.Last });
+
+            // LINQ Query syntax
+            var queryMeds = (from med in meds
+                            where med.Last > DateTime.Now.AddYears(-10)
+                            orderby med.Last descending
+                            select new {med.Description, med.Cost, med.Last}).Take(10);
+
+            // show the results
+            medsLB.Items.Clear();
+            foreach (var med in queryMeds)
+                medsLB.Items.Add($"{med.Description,-25}, {med.Cost,6:C}, {med.Last.Date.ToShortDateString()}");
+        }
     }
 }
