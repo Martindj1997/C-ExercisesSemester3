@@ -15,6 +15,8 @@ namespace Week12B_CHDB
     {
         private string conString = @"Data Source=.;Initial Catalog=DN20_CHDB3;Integrated Security=True";
         private SqlConnection dbCon;
+        private List<Medication> meds = new List<Medication>();
+
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace Week12B_CHDB
         private void loadBtn_Click(object sender, EventArgs e)
         {
             SqlDataReader rdr = null;
-            medsLB.Items.Clear();
+            meds.Clear();
 
             try
             {
@@ -59,9 +61,9 @@ namespace Week12B_CHDB
                     DateTime lastDate = (DateTime)rdr[7];
 
                     Medication med = new Medication(id, description, cost, size, strength, sig, units, lastDate);
-                    medsLB.Items.Add(med);
+                    meds.Add(med);
                 }
-
+                UpdateLB(meds);
             }
             catch (Exception ex)
             {
@@ -70,6 +72,13 @@ namespace Week12B_CHDB
             //rdr?.Close();
             if (rdr != null)
                 rdr.Close();
+        }
+
+        private void UpdateLB(IEnumerable<Medication> meds)
+        {
+            medsLB.Items.Clear();
+            foreach (Medication med in meds)
+                medsLB.Items.Add(med);
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
@@ -102,6 +111,33 @@ namespace Week12B_CHDB
             {
                 MessageBox.Show($"Error updating medication due to: {ex.Message}");
             }
+        }
+
+        private void applyBtn_Click(object sender, EventArgs e)
+        {
+            // get copy of medications
+            IEnumerable<Medication> requestedMeds = meds;
+
+            // get filter criteria
+            string description = descTB.Text.Trim();
+            if (description.Length > 0)
+                requestedMeds = requestedMeds.Where(m => m.Description.Contains(description));
+            if (costNUD.Value > 0)
+                requestedMeds = requestedMeds.Where(m => m.Cost > costNUD.Value);
+            requestedMeds = requestedMeds.Where(m => m.Last > lastDTP.Value);
+
+            // get sort criteria
+            if (defaultRB.Checked)
+                requestedMeds = requestedMeds.OrderByDescending(m => m.Description);
+            else if (descRB.Checked)
+                requestedMeds = requestedMeds.OrderBy(m => m.Description);
+            else if (costRB.Checked)
+                requestedMeds = requestedMeds.OrderByDescending(m => m.Cost);
+            else if (lastRB.Checked)
+                requestedMeds = requestedMeds.OrderByDescending(m => m.Last);
+
+            // update listbox
+            UpdateLB(requestedMeds);
         }
     }
 }
