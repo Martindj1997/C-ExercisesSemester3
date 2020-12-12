@@ -76,6 +76,7 @@ namespace Week13B_CHDBWithJoin
             this.filterBtn.TabIndex = 3;
             this.filterBtn.Text = "Filter";
             this.filterBtn.UseVisualStyleBackColor = true;
+            this.filterBtn.Click += new System.EventHandler(this.filterBtn_Click);
             // 
             // costNUD
             // 

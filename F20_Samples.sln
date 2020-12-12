@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week12B-CHDB", "Week12B-CHD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week13B-CHDBWithJoin", "Week13B-CHDBWithJoin\Week13B-CHDBWithJoin.csproj", "{A28BB063-D577-402D-AAF7-BFEAF38DAAEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week13B-QueueEx", "Week13B-QueueEx\Week13B-QueueEx.csproj", "{15FE1AB1-3325-4D38-A16D-637F83F92960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{A28BB063-D577-402D-AAF7-BFEAF38DAAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28BB063-D577-402D-AAF7-BFEAF38DAAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28BB063-D577-402D-AAF7-BFEAF38DAAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15FE1AB1-3325-4D38-A16D-637F83F92960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FE1AB1-3325-4D38-A16D-637F83F92960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FE1AB1-3325-4D38-A16D-637F83F92960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FE1AB1-3325-4D38-A16D-637F83F92960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

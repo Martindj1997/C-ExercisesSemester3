@@ -68,25 +68,63 @@ namespace Week13B_CHDBWithJoin
                 foreach (VendorItem vi in vendorItems)
                     vendorItemsLB.Items.Add(vi);
 
-                //// prepare VENDORS query
-                //cmd = new SqlCommand("SELECT * FROM vendors", dbCon);
-                //rdr = cmd.ExecuteReader();
-                //while (rdr.Read())
-                //{
-                //    int id = (int)rdr[0];
-                //    // complete to populate the vendors list
-                //}
+                // ALTERNATE APPROACH - populate vendors and items lists separately using SqlCommands and join using LINQ
 
-                //var vendItems = from item in items
-                //                join vend in vendors on item.VendorId equals vend.Id
-                //                select new VendorItem(item.Id, item.Description, item.Cost, vend.VendorName, vend.VendorTotalYTD);
-                //foreach (VendorItem vi in vendItems)
-                //    vendorItemsLLB.Items.Add(vi);
+                // prepare and execute ITEMS query
+                // update items list
+                cmd = new SqlCommand("SELECT * FROM items", dbCon);
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    int id = (int)rdr[0];
+                    string description = rdr[1].ToString();
+                    decimal cost = (decimal)rdr[2];
+                    int vendId = (int)rdr["primary_vendor_id"];
+                    Item item = new Item(id, description, cost, vendId);
+                    items.Add(item);
+                }
+                rdr?.Close();
+
+                // prepare and execute VENDORS query
+                // update vendors list
+                cmd = new SqlCommand("SELECT * FROM vendors", dbCon);
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    int id = (int)rdr[0];
+                    string name = rdr[1].ToString();
+                    decimal cost = (decimal)rdr["purchases_ytd"];
+                    Vendor vendor = new Vendor(id, name, cost);
+                    vendors.Add(vendor);
+                }
+                rdr?.Close();
+
+
+                // use LINQ to join the results from the two lists
+                vendorItemsLLB.Items.Clear();
+                var vendItems = from item in items
+                                join vend in vendors on item.VendorId equals vend.Id
+                                select new VendorItem(item.Id, item.Description, item.Cost, vend.VendorName, vend.VendorTotalYTD);
+                foreach (VendorItem vi in vendItems)
+                    vendorItemsLLB.Items.Add(vi);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading DB due to: {ex.Message}");
             }
+        }
+
+        private void filterBtn_Click(object sender, EventArgs e)
+        {
+            // use LINQ to join the results from the two lists
+            var vendItems = from item in items
+                            join vend in vendors on item.VendorId equals vend.Id
+                            where item.Cost < costNUD.Value
+                            select new VendorItem(item.Id, item.Description, item.Cost, vend.VendorName, vend.VendorTotalYTD);
+
+            vendorItemsLLB.Items.Clear();
+            foreach (VendorItem vi in vendItems)
+                vendorItemsLLB.Items.Add(vi);
         }
     }
 }
